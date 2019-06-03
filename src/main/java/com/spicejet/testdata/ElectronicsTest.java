@@ -24,8 +24,8 @@ public class ElectronicsTest extends TestBase {
 	}
 	@Test
 	public void login() throws Exception{
-		ElePage.login(prop.getProperty("username"),prop.getProperty("pass"));
-		//ElePage.closedata();
+		//ElePage.login(prop.getProperty("username"),prop.getProperty("pass"));
+		ElePage.closedata();
 		ElePage.mouse();
 		ElePage.miclick();
 		ElePage.list();

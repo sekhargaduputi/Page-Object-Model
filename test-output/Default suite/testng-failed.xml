@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.spicejet.testdata.ElectronicsTest">
+      <class name="com.spicejet.testdata.MensTest">
         <methods>
-          <include name="setUp"/>
-          <include name="login"/>
+          <include name="setup"/>
+          <include name="close1"/>
         </methods>
-      </class> <!-- com.spicejet.testdata.ElectronicsTest -->
+      </class> <!-- com.spicejet.testdata.MensTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

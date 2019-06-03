@@ -15,7 +15,8 @@ public class LoginPage extends TestBase {
 	WebElement Pass;
 	
 	@FindBy(xpath="//button[@class='_2AkmmA _1LctnI _7UHT_c']")
-	WebElement Login;  
+	WebElement Login; 
+	
 	@FindBy(xpath="//button[@class='_2AkmmA _29YdH8']")
 	WebElement close;
 	

@@ -8,7 +8,7 @@ import com.spicejet.qa.Base.TestBase;
 
 public class LoginPage extends TestBase {
 
-	@FindBy(xpath="//input[@class='_2zrpKA']")
+	@FindBy(xpath="(//input[@type='text'])[2]")
 	WebElement Email;
 	
 	@FindBy(xpath="//input[@type='password']")

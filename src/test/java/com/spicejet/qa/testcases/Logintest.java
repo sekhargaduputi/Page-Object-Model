@@ -1,4 +1,4 @@
-package com.spicejet.testdata;
+package com.spicejet.qa.testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -11,6 +11,7 @@ import com.spicejet.qa.pages.LoginPage;
 public class Logintest extends TestBase {
 	
 	LoginPage logins;
+	
 	public Logintest(){
 		super();
 	}
@@ -26,11 +27,12 @@ public class Logintest extends TestBase {
 		String tittle=logins.validateloginpagetitle();
 		Assert.assertEquals(tittle,"Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!");
 		logins.login(prop.getProperty("username"),prop.getProperty("pass"));
+		Thread.sleep(2000);
 	}
-	/*@AfterMethod
+	@AfterMethod
 	public void teardown(){
 		driver.close();
-	}*/
+	}
 	
 	
 

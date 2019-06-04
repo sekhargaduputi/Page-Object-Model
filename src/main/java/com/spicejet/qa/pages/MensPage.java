@@ -15,17 +15,17 @@ public class MensPage extends TestBase {
 	
 	String Parent=driver.getWindowHandle();
 	
-	@FindBy(xpath="//input[@class='_2zrpKA _1dBPDZ']")
-	WebElement Email;
-	
-	@FindBy(xpath="//*[@type='password']")
-	WebElement Pass;
-	
-	@FindBy(xpath="//button[@class='_2AkmmA _1LctnI _7UHT_c']")
-	WebElement Login; 
-	
-	@FindBy(xpath="//button[@class='_2AkmmA _29YdH8']")
-	WebElement close;
+//	@FindBy(xpath="//input[@class='_2zrpKA _1dBPDZ']")
+//	WebElement Email;
+//	
+//	@FindBy(xpath="//*[@type='password']")
+//	WebElement Pass;
+//	
+//	@FindBy(xpath="//button[@class='_2AkmmA _1LctnI _7UHT_c']")
+//	WebElement Login; 
+//	
+//	@FindBy(xpath="//button[@class='_2AkmmA _29YdH8']")
+//	WebElement close;
 	
 	@FindBy(xpath="//span[contains(text(),'Men')]")
 	WebElement Men;
@@ -37,23 +37,26 @@ public class MensPage extends TestBase {
 	WebElement product;
 	
 	@FindBy(xpath="//button[@class='_2AkmmA _2Npkh4 _2MWPVK']")
-	WebElement addcart;
+	WebElement add;
 	
 	@FindBy(xpath="//a[contains(text(),'S')]")
 	WebElement small;
+	
+	
 	
 	public MensPage(){
 		PageFactory.initElements(driver, this);
 	}
 	public void scroll(){
 		JavascriptExecutor ex=(JavascriptExecutor)driver;
-		ex.executeScript("window.scrollBy(0,500)");
+		ex.executeScript("arguments[0].scrollIntoView();", add);
+	
 	}
 	public void smallsize(){
 		small.click();
 	}
-	public void add(){
-		addcart.click();
+	public void addcart(){
+		add.click();
 	}
 	public void men(){
 		Actions actions=new Actions(driver);
@@ -68,9 +71,9 @@ public class MensPage extends TestBase {
 		
 	}
 
-	public void closedata(){
-		close.click();
-	}
+//	public void closedata(){
+//		close.click();
+//	}
 	public String tittle(){
 		return driver.getTitle();
 	}
@@ -91,13 +94,13 @@ public class MensPage extends TestBase {
 		driver.switchTo().window(Parent);
 	}
 	
-	public void login(String Em,String Ps) throws Exception{
-		
-		Email.sendKeys(Em);
-		//Thread.sleep(2000);
-		Email.sendKeys(Ps);
-		Email.click();
-	}
+//	public void login(String Em,String Ps) throws Exception{
+//		
+//		Email.sendKeys(Em);
+//		//Thread.sleep(2000);
+//		Email.sendKeys(Ps);
+//		Email.click();
+//	}
 	public void child(){
 		Set<String> handle=driver.getWindowHandles();
 		Iterator<String> it=handle.iterator();

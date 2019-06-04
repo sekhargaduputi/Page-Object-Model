@@ -1,4 +1,4 @@
-package com.spicejet.testdata;
+package com.spicejet.qa.testcases;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -36,11 +36,11 @@ public class ElectronicsTest extends TestBase {
 		
 	
 	}
-	/*@AfterMethod
+	@AfterMethod
 	public void teardown(){	
 	driver.quit();
 		
-	}*/
+	}
 	
 
 }

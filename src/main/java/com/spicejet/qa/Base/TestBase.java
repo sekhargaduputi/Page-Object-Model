@@ -34,7 +34,7 @@ public class TestBase {
 		String browsername=prop.getProperty("browser");
 		
 		if(browsername.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver","D:\\\\Testing Softwares\\\\Suresh Sir Selinum\\\\New Softwares&Jars\\\\Browser\\\\chromedriver_win 74.exe");
+			System.setProperty("webdriver.chrome.driver","D:\\Testing Softwares\\Suresh Sir Selinum\\New Softwares&Jars\\Browser\\chromedriver_win 74.exe");
 			driver=new ChromeDriver();
 		}
 		else if(browsername.equals("firefox")){
@@ -44,7 +44,7 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
-		driver.manage().deleteAllCookies();
+//		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.page_load_Timeout,TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.impl_load_Timeout,TimeUnit.SECONDS);
 		

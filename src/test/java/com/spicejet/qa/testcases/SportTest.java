@@ -39,6 +39,8 @@ public class SportTest extends TestBase {
 		Thread.sleep(2000);
 		sport.medium();
 		sport.addtocart();
+		sport.parent();
+		
 	}
 
 }

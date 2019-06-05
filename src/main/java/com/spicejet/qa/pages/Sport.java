@@ -70,6 +70,12 @@ public class Sport extends TestBase {
 	public void helemetlink(){
 		helmet.click();
 	}
+	public void parent(){
+		driver.close();
+		driver.switchTo().window(Parent);
+		
+	}
+	
 	
 
 }

@@ -30,11 +30,12 @@ public class LoginPage extends TestBase {
 	public void login(String Em,String pa) throws Exception{
 		Email.sendKeys(Em);
 		Pass.sendKeys(pa);	
-		Thread.sleep(2000);
 		Login.click();
+		Thread.sleep(2000);
 	}
 	public void closedata(){
 		close.click();
+		
 	}
 	
 
